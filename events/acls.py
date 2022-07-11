@@ -35,7 +35,7 @@ def get_weather(city, state):
         longitude = content[0]["lon"]
 
     except (KeyError, IndexError):
-        return {"picture_url": None}
+        return {"coordinates": None}
 
     params = {
         "lat": latitude,
