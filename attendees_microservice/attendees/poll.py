@@ -13,3 +13,7 @@ def get_conferences():
             import_href=conference["href"],
             defaults={"name": conference["name"]},
         )
+
+
+# this funtion reaches into monolith conference model periodically requesting get to get the data needed
+# api conferences url is mapped to conference list which will return a json string of conference lists

@@ -1,0 +1,12 @@
+FROM python:3
+#python base image
+ENV PYTHONUNBUFFERED 1
+#run python unbuffered
+WORKDIR /app
+#set working dir
+COPY requirements.txt requirements.txt
+#copy requirements into image
+RUN pip install -r requirements.txt
+#install requirements 
+# ADD THESE TWO LINES TO SET UP ROOT CRONTAB
+CMD python attendees/account_info_consumer.py
