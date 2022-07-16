@@ -12,6 +12,7 @@ def get_conferences():
         ConferenceVO.objects.update_or_create(
             import_href=conference["href"],
             defaults={"name": conference["name"]},
+            id=conference["id"],
         )
 
 

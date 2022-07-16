@@ -51,6 +51,7 @@ class ConferenceListEncoder(ModelEncoder):
     model = Conference
     properties = [
         "name",
+        "id",
     ]
 
 
